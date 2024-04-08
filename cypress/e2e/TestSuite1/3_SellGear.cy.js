@@ -10,8 +10,8 @@ describe('Sell your gear', () => {
         cy.SaveLocaleSettings()
         cy.get(".reverb-modal__content").should("not.exist")
         cy.wait(1000).then(() => {
-            //Sign In
-            cy.SignIn()
+            //Sign Up
+            cy.SignUpToSellGear()
         });
         // Click Sell Gear button
         cy.get(".mobile-d-none .reverb-header__nav__link").click()
@@ -41,9 +41,10 @@ describe('Sell your gear', () => {
         cy.get("#phone").type('10101012')
         //Click continue button
         cy.get(".rc-button--medium").click()
-        cy.wait(1000)
-        // Select model
-        cy.get("select#seedId").select('Player Stratocaster with Pau Ferro Fretboard 2023 - Present Anniversary 2-Color Sunburst')
+        cy.wait(1000).then(() => {
+            // Select model
+            cy.get("select#seedId").select('Player Stratocaster with Pau Ferro Fretboard 2023 - Present Anniversary 2-Color Sunburst')
+        });
         //Click on continue
         cy.get(".sell-form-section-buttons .rc-button--medium").click()
 

@@ -17,9 +17,9 @@ describe('Sign up and Sign In', () => {
         // Enter Last Name
         cy.get("input[autocomplete='family-name']").type('Example')
         // Enter Email
-        cy.get("input[autocomplete='email']").first().type('cypresscypress50501checkpoint@gmail.com')
+        cy.get("input[autocomplete='email']").first().type('cypresscypress3534checkpoint@gmail.com')
         //Confirm Email
-        cy.get("#emailConfirmValue").type('cypresscypress50510checkpoint@gmail.com')
+        cy.get("#emailConfirmValue").type('cypresscypress3534checkpoint@gmail.com')
         //Enter Password
         cy.get("#signup--password").type('PasswordForCheckpoint')
         //Check privacy policy
